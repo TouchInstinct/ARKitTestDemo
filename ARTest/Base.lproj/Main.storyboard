@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c9o-SY-nTv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="c4d-Co-ZDg">
+            <objects>
+                <viewController id="c9o-SY-nTv" customClass="ViewController" customModule="ARTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7yh-1L-coP"/>
+                        <viewControllerLayoutGuide type="bottom" id="nug-AQ-Ian"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Bl-Sd-CgL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJt-7h-HKA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIe-cZ-8FM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="39"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.20593089788732394" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="tJh-Mb-wL7"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8H-27-gOc">
+                                <rect key="frame" x="321" y="28" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njh-xB-Eni">
+                                <rect key="frame" x="8" y="28" width="10.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prizel" translatesAutoresizingMaskIntoConstraints="NO" id="afd-Gw-4Rj">
+                                <rect key="frame" x="137" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="BtR-SZ-t1D"/>
+                                    <constraint firstAttribute="width" constant="100" id="NBn-9I-5Gh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Njh-xB-Eni" firstAttribute="leading" secondItem="1Bl-Sd-CgL" secondAttribute="leading" constant="8" id="2wP-ef-L3T"/>
+                            <constraint firstItem="dJt-7h-HKA" firstAttribute="leading" secondItem="1Bl-Sd-CgL" secondAttribute="leading" id="4bx-Tx-sPe"/>
+                            <constraint firstItem="A8H-27-gOc" firstAttribute="trailing" secondItem="1Bl-Sd-CgL" secondAttribute="trailingMargin" constant="8" id="5XV-Xz-6yD"/>
+                            <constraint firstItem="afd-Gw-4Rj" firstAttribute="centerX" secondItem="1Bl-Sd-CgL" secondAttribute="centerX" id="AfR-xh-8Y8"/>
+                            <constraint firstItem="nug-AQ-Ian" firstAttribute="top" secondItem="dJt-7h-HKA" secondAttribute="bottom" id="CAV-7O-bxx"/>
+                            <constraint firstItem="afd-Gw-4Rj" firstAttribute="centerY" secondItem="1Bl-Sd-CgL" secondAttribute="centerY" id="HWi-y6-cjB"/>
+                            <constraint firstItem="dJt-7h-HKA" firstAttribute="top" secondItem="7yh-1L-coP" secondAttribute="bottom" id="KIN-nm-Epo"/>
+                            <constraint firstAttribute="trailing" secondItem="TIe-cZ-8FM" secondAttribute="trailing" id="PgX-AX-7DJ"/>
+                            <constraint firstItem="Njh-xB-Eni" firstAttribute="top" secondItem="7yh-1L-coP" secondAttribute="bottom" constant="8" id="PvX-S5-4JB"/>
+                            <constraint firstAttribute="trailing" secondItem="dJt-7h-HKA" secondAttribute="trailing" id="edJ-JQ-NAX"/>
+                            <constraint firstItem="TIe-cZ-8FM" firstAttribute="top" secondItem="7yh-1L-coP" secondAttribute="bottom" id="gm7-H4-RT2"/>
+                            <constraint firstItem="A8H-27-gOc" firstAttribute="top" secondItem="7yh-1L-coP" secondAttribute="bottom" constant="8" id="hCg-yz-J0r"/>
+                            <constraint firstItem="TIe-cZ-8FM" firstAttribute="leading" secondItem="1Bl-Sd-CgL" secondAttribute="leading" id="jGI-rc-aWt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="prizelImageView" destination="afd-Gw-4Rj" id="f1F-B7-TSS"/>
+                        <outlet property="sceneView" destination="dJt-7h-HKA" id="r5e-mO-MuU"/>
+                        <outlet property="scoreLabel" destination="Njh-xB-Eni" id="XXa-6c-CYr"/>
+                        <outlet property="timeLabel" destination="A8H-27-gOc" id="ICZ-8U-tjw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bP-sf-1A2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176.80000000000001" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="prizel" width="288" height="288"/>
+    </resources>
+</document>

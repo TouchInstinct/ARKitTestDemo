@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARTestGame" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKg-Br-WkV">
+                                <rect key="frame" x="10" y="273" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TouchInstinct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsj-bS-o2r">
+                                <rect key="frame" x="10" y="638" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-mobile" translatesAutoresizingMaskIntoConstraints="NO" id="2jk-ie-pkn">
+                                <rect key="frame" x="144" y="324" width="87" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="Bxi-bA-Qfi"/>
+                                    <constraint firstAttribute="height" constant="128" id="CR6-2H-sBv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ARKit_logo" translatesAutoresizingMaskIntoConstraints="NO" id="6LN-bt-MQx">
+                                <rect key="frame" x="139.5" y="28" width="96" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="26q-0o-Zof"/>
+                                    <constraint firstAttribute="height" constant="88" id="ARt-7O-yw9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HKg-Br-WkV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="0vc-uU-83H"/>
+                            <constraint firstItem="2jk-ie-pkn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1R6-Iy-sOb"/>
+                            <constraint firstItem="qsj-bS-o2r" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="10" id="1kI-0n-tPp"/>
+                            <constraint firstItem="6LN-bt-MQx" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="3yF-pL-AIg"/>
+                            <constraint firstItem="2jk-ie-pkn" firstAttribute="top" secondItem="HKg-Br-WkV" secondAttribute="bottom" constant="30" id="CUp-ke-9bM"/>
+                            <constraint firstAttribute="trailing" secondItem="HKg-Br-WkV" secondAttribute="trailing" constant="10" id="F6S-c2-3dv"/>
+                            <constraint firstItem="6LN-bt-MQx" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fuk-Pj-kVC"/>
+                            <constraint firstAttribute="trailing" secondItem="qsj-bS-o2r" secondAttribute="trailing" constant="10" id="iCr-Rb-ZJu"/>
+                            <constraint firstItem="HKg-Br-WkV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="10" id="tR9-M5-o1x"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="qsj-bS-o2r" secondAttribute="bottom" constant="8" id="zP3-nK-wLN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ARKit_logo" width="237" height="258"/>
+        <image name="logo-mobile" width="116" height="184"/>
+    </resources>
+</document>
