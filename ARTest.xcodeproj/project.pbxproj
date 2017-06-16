@@ -94,6 +94,8 @@
 				0AC0DA3A1EE99233006E2CC9 /* Sources */,
 				0AC0DA3B1EE99233006E2CC9 /* Frameworks */,
 				0AC0DA3C1EE99233006E2CC9 /* Resources */,
+				0AA8505A1EF3FB4E00353B55 /* SwiftLint */,
+				0AA8505B1EF3FBE200353B55 /* Tailor */,
 			);
 			buildRules = (
 			);
@@ -150,6 +152,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AA8505A1EF3FB4E00353B55 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		0AA8505B1EF3FBE200353B55 /* Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Tailor;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if hash tailor 2>/dev/null; then\ntailor\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AC0DA3A1EE99233006E2CC9 /* Sources */ = {
@@ -303,7 +336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchInstinct.ARTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +350,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchInstinct.ARTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -28,21 +28,22 @@ private enum GameState {
     case shootting
 }
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+final class ViewController: UIViewController, ARSCNViewDelegate {
 
     // MARK: - Constants
 
     private static let logoMaxCount = 3
+    private static let cameraToLogoSpace: Float = -1
 
     // MARK: - IBOutlets
 
-    @IBOutlet weak var sceneView: ARSCNView!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var prizelImageView: UIImageView!
+    @IBOutlet private weak var sceneView: ARSCNView!
+    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var prizelImageView: UIImageView!
 
     // MARK: - Properties
-    
+
     fileprivate var state: GameState = .placing {
         didSet {
             prizelImageView.isHidden = state == .placing
@@ -59,12 +60,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     fileprivate var gameTimer: Timer?
 
     // MARK: - ViewController life cycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         sceneView.scene.physicsWorld.contactDelegate = self
-        
+
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
 
@@ -73,10 +74,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         logoCount = 0
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         // Create a session configuration
         let configuration = ARSessionConfiguration.isSupported ? ARWorldTrackingSessionConfiguration()
                                                                : ARSessionConfiguration()
@@ -84,18 +85,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Run the view's session
         sceneView.session.run(configuration)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
         // Pause the view's session
         sceneView.session.pause()
         stopGame()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
     }
 
     // MARK: - Actions
@@ -118,7 +114,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene.rootNode.addChildNode(logo)
 
         var translation = matrix_identity_float4x4
-        translation.columns.3.z = -1
+        translation.columns.3.z = ViewController.cameraToLogoSpace
         logo.simdTransform = matrix_multiply(currentFrame.camera.transform, translation)
 
         logoCount += 1
@@ -168,12 +164,12 @@ extension ViewController {
     }
 
     fileprivate func configureTimeLabel() {
-        self.timeLabel.isHidden = self.gameSeconds == 0
+        timeLabel.isHidden = self.gameSeconds == 0
 
         let seconds = self.gameSeconds % 60
-        let minutes = (self.gameSeconds / 60) % 60;
+        let minutes = (self.gameSeconds / 60) % 60
 
-        self.timeLabel.text = String(format: "%02d:%02d", minutes, seconds)
+        timeLabel.text = String(format: "%02d:%02d", minutes, seconds)
     }
 
 }
