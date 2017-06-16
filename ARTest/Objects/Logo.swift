@@ -23,12 +23,25 @@
 import UIKit
 import SceneKit
 
-class Logo: SCNNode {
+final class Logo: SCNNode {
+
+    private static let boxSide: CGFloat = 0.1
 
     override init() {
         super.init()
+        initialization()
+    }
 
-        let logo = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialization()
+    }
+
+    private func initialization() {
+        let logo = SCNBox(width: Logo.boxSide,
+                          height: Logo.boxSide,
+                          length: Logo.boxSide,
+                          chamferRadius: 0)
         self.geometry = logo
         let shape = SCNPhysicsShape(geometry: logo, options: nil)
 
@@ -42,10 +55,6 @@ class Logo: SCNNode {
         let material = SCNMaterial()
         material.diffuse.contents = UIImage(named: "art.scnassets/logo-mobile.png")
         self.geometry?.materials  = [material, material, material, material, material, material]
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
 }

@@ -23,12 +23,22 @@
 import UIKit
 import SceneKit
 
-class ARBullet: SCNNode {
+final class ARBullet: SCNNode {
+
+    private static let sphereRadius: CGFloat = 0.025
 
     override init() {
         super.init()
+        initialization()
+    }
 
-        let arKitBox = SCNSphere(radius: 0.025)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialization()
+    }
+
+    private func initialization() {
+        let arKitBox = SCNSphere(radius: ARBullet.sphereRadius)
         self.geometry = arKitBox
         let shape = SCNPhysicsShape(geometry: arKitBox, options: nil)
         self.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape)
@@ -41,10 +51,6 @@ class ARBullet: SCNNode {
         let material = SCNMaterial()
         material.diffuse.contents = UIImage(named: "art.scnassets/ARKit_logo.png")
         self.geometry?.materials  = [material]
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
 }

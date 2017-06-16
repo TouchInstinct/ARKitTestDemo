@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c9o-SY-nTv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c9o-SY-nTv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,10 +14,6 @@
         <scene sceneID="c4d-Co-ZDg">
             <objects>
                 <viewController id="c9o-SY-nTv" customClass="ViewController" customModule="ARTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7yh-1L-coP"/>
-                        <viewControllerLayoutGuide type="bottom" id="nug-AQ-Ian"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1Bl-Sd-CgL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,20 +50,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Njh-xB-Eni" firstAttribute="leading" secondItem="1Bl-Sd-CgL" secondAttribute="leading" constant="8" id="2wP-ef-L3T"/>
-                            <constraint firstItem="dJt-7h-HKA" firstAttribute="leading" secondItem="1Bl-Sd-CgL" secondAttribute="leading" id="4bx-Tx-sPe"/>
+                            <constraint firstItem="Njh-xB-Eni" firstAttribute="leading" secondItem="IVz-9B-ZZ1" secondAttribute="leading" constant="8" id="2wP-ef-L3T"/>
+                            <constraint firstItem="dJt-7h-HKA" firstAttribute="leading" secondItem="IVz-9B-ZZ1" secondAttribute="leading" id="4bx-Tx-sPe"/>
                             <constraint firstItem="A8H-27-gOc" firstAttribute="trailing" secondItem="1Bl-Sd-CgL" secondAttribute="trailingMargin" constant="8" id="5XV-Xz-6yD"/>
-                            <constraint firstItem="afd-Gw-4Rj" firstAttribute="centerX" secondItem="1Bl-Sd-CgL" secondAttribute="centerX" id="AfR-xh-8Y8"/>
-                            <constraint firstItem="nug-AQ-Ian" firstAttribute="top" secondItem="dJt-7h-HKA" secondAttribute="bottom" id="CAV-7O-bxx"/>
+                            <constraint firstItem="dJt-7h-HKA" firstAttribute="top" secondItem="IVz-9B-ZZ1" secondAttribute="top" id="8fJ-A0-nI5"/>
+                            <constraint firstItem="afd-Gw-4Rj" firstAttribute="centerX" secondItem="IVz-9B-ZZ1" secondAttribute="centerX" id="AfR-xh-8Y8"/>
+                            <constraint firstItem="dJt-7h-HKA" firstAttribute="bottom" secondItem="IVz-9B-ZZ1" secondAttribute="bottom" id="FJZ-KH-7L1"/>
                             <constraint firstItem="afd-Gw-4Rj" firstAttribute="centerY" secondItem="1Bl-Sd-CgL" secondAttribute="centerY" id="HWi-y6-cjB"/>
-                            <constraint firstItem="dJt-7h-HKA" firstAttribute="top" secondItem="7yh-1L-coP" secondAttribute="bottom" id="KIN-nm-Epo"/>
-                            <constraint firstAttribute="trailing" secondItem="TIe-cZ-8FM" secondAttribute="trailing" id="PgX-AX-7DJ"/>
-                            <constraint firstItem="Njh-xB-Eni" firstAttribute="top" secondItem="7yh-1L-coP" secondAttribute="bottom" constant="8" id="PvX-S5-4JB"/>
-                            <constraint firstAttribute="trailing" secondItem="dJt-7h-HKA" secondAttribute="trailing" id="edJ-JQ-NAX"/>
-                            <constraint firstItem="TIe-cZ-8FM" firstAttribute="top" secondItem="7yh-1L-coP" secondAttribute="bottom" id="gm7-H4-RT2"/>
-                            <constraint firstItem="A8H-27-gOc" firstAttribute="top" secondItem="7yh-1L-coP" secondAttribute="bottom" constant="8" id="hCg-yz-J0r"/>
-                            <constraint firstItem="TIe-cZ-8FM" firstAttribute="leading" secondItem="1Bl-Sd-CgL" secondAttribute="leading" id="jGI-rc-aWt"/>
+                            <constraint firstItem="dJt-7h-HKA" firstAttribute="top" secondItem="IVz-9B-ZZ1" secondAttribute="top" id="KIN-nm-Epo"/>
+                            <constraint firstItem="IVz-9B-ZZ1" firstAttribute="trailing" secondItem="TIe-cZ-8FM" secondAttribute="trailing" id="PgX-AX-7DJ"/>
+                            <constraint firstItem="Njh-xB-Eni" firstAttribute="top" secondItem="IVz-9B-ZZ1" secondAttribute="top" constant="8" id="PvX-S5-4JB"/>
+                            <constraint firstItem="IVz-9B-ZZ1" firstAttribute="trailing" secondItem="dJt-7h-HKA" secondAttribute="trailing" id="edJ-JQ-NAX"/>
+                            <constraint firstItem="A8H-27-gOc" firstAttribute="top" secondItem="IVz-9B-ZZ1" secondAttribute="top" constant="8" id="hCg-yz-J0r"/>
+                            <constraint firstItem="TIe-cZ-8FM" firstAttribute="top" secondItem="IVz-9B-ZZ1" secondAttribute="top" id="ijq-JL-alF"/>
+                            <constraint firstItem="TIe-cZ-8FM" firstAttribute="leading" secondItem="IVz-9B-ZZ1" secondAttribute="leading" id="jGI-rc-aWt"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="IVz-9B-ZZ1"/>
                     </view>
                     <connections>
                         <outlet property="prizelImageView" destination="afd-Gw-4Rj" id="f1F-B7-TSS"/>
