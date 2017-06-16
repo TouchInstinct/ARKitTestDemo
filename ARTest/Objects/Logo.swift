@@ -54,7 +54,7 @@ final class Logo: SCNNode {
         // add texture
         let material = SCNMaterial()
         material.diffuse.contents = UIImage(named: "art.scnassets/logo-mobile.png")
-        self.geometry?.materials  = [material, material, material, material, material, material]
+        self.geometry?.materials  = Array(repeating: material, count: 6)
     }
 
 }
